@@ -99,8 +99,3 @@ prakt2.2 <- function(r,t=10)
   cat(round(volume,2),"cm2 \n")
 }
 prakt2.2(10)
-
-#contoh 10
-limStr <- readline("Enter the vector you want:");
-lim <- eval(parse(text = readline("Enter the vector you want:" ))
-
