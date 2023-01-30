@@ -29,6 +29,7 @@ ujikorelasi_twoway(x,y,0.05)
 #2.
 ujitkiri <- function(x,miunol,alpha)
 {
+  n <- length(x)
   cat("---------------------------------\n")
   cat(" Uji-t SATU SAMPEL \n")
   cat(" UNTUK UJI HIPOTESIS SATU SISI KIRI \n ")
@@ -44,6 +45,7 @@ ujitkiri <- function(x,miunol,alpha)
 
 ujitkanan <- function(x,miunol,alpha)
 {
+  n <- length(x)
   cat("---------------------------------\n")
   cat(" Uji-t SATU SAMPEL \n")
   cat(" UNTUK UJI HIPOTESIS SATU SISI KANAN \n ")
@@ -59,11 +61,12 @@ ujitkanan <- function(x,miunol,alpha)
 
 ujittwoway <- function(x,miunol,alpha)
 {
+  n <- length(x)
   cat("---------------------------------\n")
   cat(" Uji-t SATU SAMPEL \n")
   cat(" UNTUK UJI HIPOTESIS DUA ARAH \n ")
   cat("\n H0 : mean populasi =",miunol,"\n")
-  cat("\n H1 : mean populasi ",miunol,"\n\n")
+  cat("\n H1 : mean populasi ≠",miunol,"\n\n")
   cat("\n Tingkat signifikansi alpha =",alpha,"\n\n")
   thit <- (mean(x)-miunol)/sqrt(var(x)/n)
   ttabel <- qt(1-(alpha/2),n-1)
@@ -74,6 +77,7 @@ ujittwoway <- function(x,miunol,alpha)
 
 ujizkiri <- function(x,miunol,alpha)
 {
+  n <- length(x)
   cat("---------------------------------\n")
   cat(" Uji-z SATU SAMPEL \n")
   cat(" UNTUK UJI HIPOTESIS SATU SISI KIRI \n ")
@@ -89,6 +93,7 @@ ujizkiri <- function(x,miunol,alpha)
 
 ujizkanan <- function(x,miunol,alpha)
 {
+  n <- length(x)
   cat("---------------------------------\n")
   cat(" Uji-z SATU SAMPEL \n")
   cat(" UNTUK UJI HIPOTESIS SATU SISI KANAN \n ")
@@ -104,6 +109,7 @@ ujizkanan <- function(x,miunol,alpha)
 
 ujiztwoway <- function(x,miunol,alpha)
 {
+  n <- length(x)
   cat("---------------------------------\n")
   cat(" Uji-z SATU SAMPEL \n")
   cat(" UNTUK UJI HIPOTESIS DUA ARAH \n ")
